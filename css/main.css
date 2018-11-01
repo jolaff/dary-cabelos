@@ -1,0 +1,63 @@
+body {
+  background: #bbc9c9;
+  margin: 0;
+}
+
+header {
+  background-image: url('/images/accessory-blades-blur.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  position: relative;
+  padding: 10px;
+}
+
+nav {
+  overflow: hidden;
+  background-color: #c56b6b;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  float: left;
+  display: block;
+  color: #440f0f;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #440f0f;
+  color: #c56b6b;
+}
+
+nav li a.active {
+  background-color: #221111;
+  color: #c56b6b;
+}
+
+main {
+  padding: 16px;
+}
+
+/* Sticky effect */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + main {
+  padding-top: 60px;
+}
+
+footer {
+  text-align: center;
+}
