@@ -6,9 +6,10 @@
 }
 
 body {
-  background: #bbc9c9;
+  background: #ddd;
   margin: 0;
   font-family: var(--main-font-family);
+  font-size: 16px;
 }
 
 header {
@@ -21,6 +22,24 @@ header {
   padding: 10px;
 }
 
+.logo {
+  color: #dddddd;
+  font-size: 78px;
+  text-shadow: 0px 0px 6px #000000, 1px 1px 18px #eeeeee;
+}
+
+.logo.dary {
+  position: absolute;
+  top: 280px;
+  right: 125px;
+}
+
+.logo.cabelos {
+  position: absolute;
+  top: 370px;
+  right: 30px;
+}
+
 nav {
   position: absolute;
   top: 40px;
@@ -29,8 +48,8 @@ nav {
   overflow: hidden;
   font-family: var(--title-font-family);
   font-size: 24px;
-  width: 474.45px;
-  transition: width 1s;
+  width: 504.5px;
+  transition: background-color 1s;
 }
 
 nav ul {
@@ -44,30 +63,34 @@ nav li a {
   display: block;
   color: #dddddd;
   text-align: center;
+  border-radius: 15px;
+  margin: 3px;
   padding: 14px 16px;
   text-decoration: none;
   float: right;
+  transition: all 500ms;
 }
 
 nav li a:hover {
-  background-color: rgba(180, 180, 180, 0.5);
+  background-color: rgba(80, 80, 80, 1);
   color: #dddddd;
+  text-shadow: 1px 1px 2px #000000;
 }
 
 nav li a.active {
-  background-color: rgba(240, 220, 220, 0.5);
+  background-color: rgba(220, 220, 220, 1);
   color: #222222;
 }
 
 main {
-  padding: 16px;
-  width: 80%;
-  margin: 0 auto;
+  padding: 0;
   text-align: center;
 }
 
 section {
   border: 1px solid black;
+  width: 80%;
+  margin: 0 auto;
 }
 
 h1 {
@@ -82,6 +105,10 @@ h1 {
 
 .sticky + main {
   padding-top: 60px;
+}
+
+.black-bg {
+  background-color: #222222;
 }
 
 footer {
