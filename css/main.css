@@ -5,51 +5,66 @@
   --title-font-family: 'Parisienne', cursive;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   background: #ddd;
   margin: 0;
   font-family: var(--main-font-family);
-  font-size: 16px;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+main {
+  padding: 0;
+  text-align: center;
+  max-height: 100%;
+  perspective: 2px;
+  perspective-origin: center top;
+  transform-style: preserve-3d;
 }
 
 header {
-  background-image: url('/images/black-and-white-color-curve.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 100vh;
+  background: url('/images/black-and-white-color-curve.jpg');
   background-size: cover;
-  min-height: 500px;
+  background-position: center center;
   position: relative;
-  padding: 10px;
+  vertical-align: top;
+  transform-origin: center top;
+  transform: translateZ(-1.9px) scale(2);
 }
 
 .logo {
+  padding: 0;
+  margin: 0;
   color: #dddddd;
-  font-size: 78px;
+  font-size: 82px;
   text-shadow: 0px 0px 6px #000000, 1px 1px 18px #eeeeee;
+  position: absolute;
+  top: 2vh;
+  left: 5vh;
 }
 
-.logo.dary {
+.nav-container {
+  height: 150%;
   position: absolute;
-  top: 280px;
-  right: 125px;
-}
-
-.logo.cabelos {
-  position: absolute;
-  top: 370px;
-  right: 30px;
+  top: 92vh;
+  right: 5vh;
 }
 
 nav {
-  position: absolute;
-  top: 40px;
-  left: 20px;
-  border: 1px solid #dddddd;
-  overflow: hidden;
-  font-family: var(--title-font-family);
-  font-size: 24px;
+  font-family: var(--main-font-family);
+  font-size: 14px;
   width: 504.5px;
-  transition: background-color 1s;
+  position: sticky;
+  top: 0vh;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 1s;
 }
 
 nav ul {
@@ -65,10 +80,11 @@ nav li a {
   text-align: center;
   border-radius: 15px;
   margin: 3px;
-  padding: 14px 16px;
+  padding: 10px 16px;
   text-decoration: none;
   float: right;
   transition: all 500ms;
+  width: 60px;
 }
 
 nav li a:hover {
@@ -82,33 +98,34 @@ nav li a.active {
   color: #222222;
 }
 
-main {
-  padding: 0;
-  text-align: center;
-}
-
 section {
   border: 1px solid black;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  background-color: #ddd;
+  transform: translateZ(0);
 }
 
 h1 {
   font-family: 'Parisienne', cursive;
 }
 
-/* Sticky effect */
-.sticky {
+/*.sticky {
   position: fixed;
-  top: 0;
+  top: 0px;
+  right: 2.5vh;
+  z-index: 99;
+  transform: translateZ(1);
 }
 
 .sticky + main {
   padding-top: 60px;
-}
+}*/
 
 .black-bg {
   background-color: #222222;
+  padding-top: 10px;
+  height: 60px;
 }
 
 footer {

@@ -1,20 +1,17 @@
-// Function to implement sticky effect on scroll down
+// Function to change background color of navbar on scroll down
 window.onscroll = () => {
   scrollDown();
 };
 
-const nav = document.getElementsByTagName('nav');
-let sticky = nav[0].offsetTop;
+const navContainer = document.getElementsByClassName('nav-container');
+const nav = document.getElementById('navbar');
+let sticky = navContainer[0].offsetTop + 60;
 
 const scrollDown = () => {
   if (window.pageYOffset >= sticky) {
-    nav[0].classList.add('sticky');
+    console.log(nav.offsetTop);
+    nav.classList.add('black-bg');
   } else {
-    nav[0].classList.remove('sticky');
-  }
-  if (window.pageYOffset > 480) {
-    nav[0].classList.add('black-bg');
-  } else {
-    nav[0].classList.remove('black-bg');
+    nav.classList.remove('black-bg');
   }
 };
